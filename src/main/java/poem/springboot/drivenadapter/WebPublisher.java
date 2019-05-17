@@ -7,15 +7,6 @@ import org.springframework.ui.Model;
 
 import poem.hexagon.boundary.drivenport.IWriteLines;
 
-/**
- * Right-side, driven adapter for writing text to the output model.
- * 
- * Inspired by a talk by A. Cockburn and T. Pierrain on hexagonal architecture:
- * https://www.youtube.com/watch?v=th4AgBcrEHA
- * 
- * @author b_muth
- *
- */
 public class WebPublisher implements IWriteLines {
 	public static final String POEM_VERSES = "poemVerses";
 	
