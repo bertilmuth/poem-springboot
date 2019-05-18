@@ -17,9 +17,9 @@ public class WebPublisher implements IWriteLines {
 		this.webModel = webModel;
 	}
 
-	public void writeLines(String[] poemVerses) {
-		Objects.requireNonNull(poemVerses);
-		webModel.addAttribute(lINES_ATTRIBUTE, poemVerses);
+	public void writeLines(String[] lines) {
+		Objects.requireNonNull(lines);
+		webModel.addAttribute(lINES_ATTRIBUTE, lines);
 	}
 
 	/**
