@@ -41,6 +41,12 @@ public class PoemControllerTest {
         mockMvc.perform(get("/askForPoem").param("lang", "en"));
         assertPoemIs(EXPECTED_ENGLISH_POEM);
     }
+    
+    @Test
+    public void englishPoemWhenUnknownLanguage() throws Exception {
+        mockMvc.perform(get("/askForPoem").param("lang", "fr"));
+        assertPoemIs(EXPECTED_ENGLISH_POEM);
+    }
 
     @Test
     public void germanPoem() throws Exception {
