@@ -49,7 +49,7 @@ public class PoemControllerTest {
     }
     
 	private void assertPoemIs(String expectedPoemVerse) {
-		String[] actualPoemVerses = webPublisher.getPoemVerses();
+		String[] actualPoemVerses = webPublisher.getLines();
         assertEquals(expectedPoemVerse, actualPoemVerses[0]);
 	}
 }

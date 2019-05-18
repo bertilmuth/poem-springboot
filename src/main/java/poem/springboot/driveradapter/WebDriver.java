@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import poem.hexagon.boundary.driverport.IReactToCommands;
 import poem.springboot.drivenadapter.WebPublisher;
 
-public class WebDriver implements IDriveSpringMvc{
+public class WebDriver{
 	private IReactToCommands driverPort;
 	private WebPublisher webPublisher;
 
@@ -14,7 +14,6 @@ public class WebDriver implements IDriveSpringMvc{
 		this.webPublisher = webPublisher;
 	}
 
-	@Override
 	public void reactTo(Object command, Model webModel) {
 		webPublisher.setWebModel(webModel);
 		driverPort.reactTo(command);
