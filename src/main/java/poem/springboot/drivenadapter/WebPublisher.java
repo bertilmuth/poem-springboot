@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import poem.hexagon.boundary.drivenport.IWriteLines;
 
 public class WebPublisher implements IWriteLines {
-	public static final String lINES_ATTRIBUTE = "lines";
+	private static final String lINES_ATTRIBUTE = "lines";
 
 	private Model webModel;
 
