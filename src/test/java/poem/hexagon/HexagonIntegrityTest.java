@@ -1,4 +1,4 @@
-package poem.boundary;
+package poem.hexagon;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
@@ -11,7 +11,7 @@ import com.tngtech.archunit.lang.ArchRule;
 
 @RunWith(ArchUnitRunner.class)
 @AnalyzeClasses(packages = "poem")
-public class HexagonInsideTest {
+public class HexagonIntegrityTest {
 	@ArchTest
 	public static final ArchRule useCaseModelIsOnlyAccessedByBoundaryClassInBoundaryPackage = classes().that()
 			.haveSimpleNameEndingWith("UseCaseModel").should().onlyBeAccessed().byClassesThat()
