@@ -3,13 +3,13 @@ package poem.springboot.adapter.driver;
 import org.springframework.ui.Model;
 
 import poem.hexagon.boundary.driverport.IReactToCommands;
-import poem.springboot.adapter.driven.WebPublisher;
+import poem.springboot.adapter.driven.SpringMvcPublisher;
 
-public class WebDriver{
+public class SpringMvcDriver{
 	private IReactToCommands driverPort;
-	private WebPublisher webPublisher;
+	private SpringMvcPublisher webPublisher;
 
-	public WebDriver(IReactToCommands driverPort, WebPublisher webPublisher) {
+	public SpringMvcDriver(IReactToCommands driverPort, SpringMvcPublisher webPublisher) {
 		this.driverPort = driverPort;
 		this.webPublisher = webPublisher;
 	}

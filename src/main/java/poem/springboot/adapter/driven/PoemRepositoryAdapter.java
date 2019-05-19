@@ -7,10 +7,10 @@ import poem.hexagon.boundary.drivenport.IObtainPoems;
 import poem.springboot.Poem;
 import poem.springboot.PoemRepository;
 
-public class CrudRepositoryAdapter implements IObtainPoems {
+public class PoemRepositoryAdapter implements IObtainPoems {
 	private PoemRepository poemRepository;
 
-	public CrudRepositoryAdapter(PoemRepository poemRepository) {
+	public PoemRepositoryAdapter(PoemRepository poemRepository) {
 		this.poemRepository = poemRepository;
 	}
 	

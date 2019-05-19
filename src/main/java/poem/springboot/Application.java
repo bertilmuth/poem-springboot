@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import poem.hexagon.boundary.Boundary;
-import poem.springboot.adapter.driven.CrudRepositoryAdapter;
-import poem.springboot.adapter.driven.WebPublisher;
-import poem.springboot.adapter.driver.WebDriver;
+import poem.springboot.adapter.driven.PoemRepositoryAdapter;
+import poem.springboot.adapter.driven.SpringMvcPublisher;
+import poem.springboot.adapter.driver.SpringMvcDriver;
 
 @SpringBootApplication
 public class Application {
@@ -20,11 +20,11 @@ public class Application {
 	}
 
 	@Bean
-	public WebDriver driver() {
-		CrudRepositoryAdapter poemObtainer = new CrudRepositoryAdapter(poemRepository);
-		WebPublisher webPublisher = new WebPublisher();
+	public SpringMvcDriver driver() {
+		PoemRepositoryAdapter poemObtainer = new PoemRepositoryAdapter(poemRepository);
+		SpringMvcPublisher webPublisher = new SpringMvcPublisher();
 		Boundary boundary = new Boundary(poemObtainer, webPublisher);
-		WebDriver webDriver = new WebDriver(boundary, webPublisher);
+		SpringMvcDriver webDriver = new SpringMvcDriver(boundary, webPublisher);
 		return webDriver;
 	}
 

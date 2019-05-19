@@ -10,12 +10,12 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import poem.hexagon.boundary.Boundary;
 import poem.springboot.adapter.driven.PoemObtainerStub;
-import poem.springboot.adapter.driven.WebPublisher;
-import poem.springboot.adapter.driver.WebDriver;
+import poem.springboot.adapter.driven.SpringMvcPublisher;
+import poem.springboot.adapter.driver.SpringMvcDriver;
 
 public class PoemControllerTest {
     private MockMvc mockMvc;
-	private WebPublisher webPublisher;
+	private SpringMvcPublisher webPublisher;
     
     private static final String EXPECTED_ENGLISH_POEM = PoemObtainerStub.ENGLISH_POEM;
     private static final String EXPECTED_GERMAN_POEM = PoemObtainerStub.GERMAN_POEM;
@@ -23,9 +23,9 @@ public class PoemControllerTest {
     @Before
     public void setup() {
     	PoemObtainerStub poemObtainerStub = new PoemObtainerStub();
-    	webPublisher = new WebPublisher();
+    	webPublisher = new SpringMvcPublisher();
     	Boundary boundary = new Boundary(poemObtainerStub, webPublisher);
-    	WebDriver webDriver = new WebDriver(boundary, webPublisher);
+    	SpringMvcDriver webDriver = new SpringMvcDriver(boundary, webPublisher);
     	PoemController poemController = new PoemController(webDriver);
     	this.mockMvc = MockMvcBuilders.standaloneSetup(poemController).build();
     }
