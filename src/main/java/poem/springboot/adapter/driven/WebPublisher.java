@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import poem.hexagon.boundary.drivenport.IWriteLines;
 
 public class WebPublisher implements IWriteLines {
-	private static final String lINES_ATTRIBUTE = "lines";
+	private static final String LINES_ATTRIBUTE = "lines";
 
 	private Model webModel;
 
@@ -19,7 +19,7 @@ public class WebPublisher implements IWriteLines {
 
 	public void writeLines(String[] lines) {
 		Objects.requireNonNull(lines);
-		webModel.addAttribute(lINES_ATTRIBUTE, lines);
+		webModel.addAttribute(LINES_ATTRIBUTE, lines);
 	}
 
 	/**
@@ -33,7 +33,7 @@ public class WebPublisher implements IWriteLines {
 
 		if (webModel != null) {
 			Map<String, Object> attributes = webModel.asMap();
-			lines = (String[]) attributes.get(lINES_ATTRIBUTE);
+			lines = (String[]) attributes.get(LINES_ATTRIBUTE);
 		}
 		return lines;
 	}
