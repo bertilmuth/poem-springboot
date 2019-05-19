@@ -1,4 +1,4 @@
-package poem.springboot.drivenadapter;
+package poem.springboot.adapter.driven;
 
 import java.util.Collection;
 import java.util.stream.Collectors;

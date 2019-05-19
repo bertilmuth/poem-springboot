@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import poem.hexagon.boundary.command.AskForPoem;
-import poem.springboot.driveradapter.WebDriver;
+import poem.springboot.adapter.driver.WebDriver;
 
 @Controller
 public class PoemController { 

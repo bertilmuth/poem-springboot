@@ -1,4 +1,4 @@
-package poem.springboot.drivenadapter;
+package poem.springboot.adapter.driven;
 
 import java.util.Map;
 import java.util.Objects;

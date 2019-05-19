@@ -1,9 +1,9 @@
-package poem.springboot.driveradapter;
+package poem.springboot.adapter.driver;
 
 import org.springframework.ui.Model;
 
 import poem.hexagon.boundary.driverport.IReactToCommands;
-import poem.springboot.drivenadapter.WebPublisher;
+import poem.springboot.adapter.driven.WebPublisher;
 
 public class WebDriver{
 	private IReactToCommands driverPort;
