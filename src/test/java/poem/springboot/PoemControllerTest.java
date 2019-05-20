@@ -10,8 +10,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import poem.hexagon.boundary.Boundary;
 import poem.springboot.adapter.driven.PoemObtainerStub;
-import poem.springboot.adapter.driven.SpringMvcPublisher;
-import poem.springboot.adapter.driver.SpringMvcDriver;
+import poem.springboot.driven_adapter.SpringMvcPublisher;
+import poem.springboot.driver_adapter.SpringMvcDriver;
 
 public class PoemControllerTest {
     private MockMvc mockMvc;

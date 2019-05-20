@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import poem.hexagon.boundary.Boundary;
-import poem.springboot.adapter.driven.PoemRepositoryAdapter;
-import poem.springboot.adapter.driven.SpringMvcPublisher;
-import poem.springboot.adapter.driver.SpringMvcDriver;
+import poem.springboot.driven_adapter.PoemRepositoryAdapter;
+import poem.springboot.driven_adapter.SpringMvcPublisher;
+import poem.springboot.driver_adapter.SpringMvcDriver;
 
 @SpringBootApplication
 public class Application {

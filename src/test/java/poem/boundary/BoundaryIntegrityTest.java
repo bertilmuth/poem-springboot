@@ -20,7 +20,7 @@ public class BoundaryIntegrityTest {
 	@ArchTest
 	public static final ArchRule domainIsOnlyAccessedByCommandHandlers = classes().that()
 			.resideInAPackage("..boundary.internal.domain..").should().onlyBeAccessed()
-			.byAnyPackage("..boundary.internal.commandhandler..");
+			.byAnyPackage("..boundary.internal.command_handler..");
 	
 	@ArchTest
 	public static final ArchRule useCaseModelIsOnlyAccessedByBoundaryClass = classes().that()
@@ -28,7 +28,7 @@ public class BoundaryIntegrityTest {
 
 	@ArchTest
 	public static final ArchRule commandHandlersOnlyAccessCommandsAndDrivenPortsAndDomainAndStandardJava = classes()
-			.that().resideInAPackage("..boundary.internal.commandhandler..").should().onlyAccessClassesThat()
-			.resideInAnyPackage("..command..", "..boundary.port..", "..boundary.internal.domain..", "java.lang..",
+			.that().resideInAPackage("..boundary.internal.command_handler..").should().onlyAccessClassesThat()
+			.resideInAnyPackage("..command..", "..boundary.driven_port..", "..boundary.internal.domain..", "java.lang..",
 					"java.util..");
 }
