@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import poem.hexagon.boundary.Boundary;
+import poem.boundary.Boundary;
 import poem.springboot.adapter.driven.PoemObtainerStub;
 import poem.springboot.driven_adapter.SpringMvcPublisher;
 import poem.springboot.driver_adapter.SpringMvcDriver;

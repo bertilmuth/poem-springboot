@@ -5,7 +5,7 @@ import java.util.Objects;
 
 import org.springframework.ui.Model;
 
-import poem.hexagon.boundary.drivenport.IWriteLines;
+import poem.boundary.driven_port.IWriteLines;
 
 public class SpringMvcPublisher implements IWriteLines {
 	private static final String LINES_ATTRIBUTE = "lines";

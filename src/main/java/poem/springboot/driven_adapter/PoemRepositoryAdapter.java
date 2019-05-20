@@ -3,7 +3,7 @@ package poem.springboot.driven_adapter;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-import poem.hexagon.boundary.drivenport.IObtainPoems;
+import poem.boundary.driven_port.IObtainPoems;
 import poem.springboot.Poem;
 import poem.springboot.PoemRepository;
 
