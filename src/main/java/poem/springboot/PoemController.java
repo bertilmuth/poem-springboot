@@ -10,7 +10,7 @@ import poem.command.AskForPoem;
 import poem.springboot.driver_adapter.SpringMvcDriver;
 
 @Controller
-public class PoemController { 
+class PoemController { 
 	private SpringMvcDriver webDriver;
 
 	@Autowired
