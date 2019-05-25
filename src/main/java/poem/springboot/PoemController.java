@@ -11,16 +11,17 @@ import poem.springboot.driver_adapter.SpringMvcDriver;
 
 @Controller
 class PoemController { 
-	private SpringMvcDriver webDriver;
+	private SpringMvcDriver springMvcDriver;
 
 	@Autowired
-	public PoemController(SpringMvcDriver webDriver) {
-		this.webDriver = webDriver;
+	public PoemController(SpringMvcDriver springMvcDriver) {
+		this.springMvcDriver = springMvcDriver;
 	}
 		
 	@GetMapping("/askForPoem")
 	public String askForPoem(@RequestParam(name = "lang", required = false, defaultValue = "en") String language, Model webModel) {
-		webDriver.reactTo(new AskForPoem(language), webModel);
+		// Forward commands to the hexagon, by using SpringMvcDriver
+		springMvcDriver.reactTo(new AskForPoem(language), webModel);
 		return "poemView";
 	}
 }
