@@ -55,7 +55,7 @@ public class Application {
 	private void createPoem(String language, String verses) {
 		Poem poem = new Poem();
 		poem.setLanguage(language);
-		poem.setVerses(verses);
+		poem.setText(verses);
 		poemRepository.save(poem);
 	}
 }

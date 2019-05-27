@@ -16,9 +16,9 @@ public class Poem {
 	@NotBlank(message = "Language is mandatory")
 	private String language;
 
-	@NotBlank(message = "Verses are mandatory")
+	@NotBlank(message = "Text is mandatory")
 	@Column(length = 10000)
-	private String verses;
+	private String text;
 
 	public long getId() {
 		return id;
@@ -32,12 +32,12 @@ public class Poem {
 		this.language = language;
 	}
 
-	public String getVerses() {
-		return verses;
+	public String getText() {
+		return text;
 	}
 
-	public void setVerses(String verses) {
-		this.verses = verses;
+	public void setText(String text) {
+		this.text = text;
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class Poem {
 		int result = 1;
 		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((language == null) ? 0 : language.hashCode());
-		result = prime * result + ((verses == null) ? 0 : verses.hashCode());
+		result = prime * result + ((text == null) ? 0 : text.hashCode());
 		return result;
 	}
 
@@ -66,16 +66,16 @@ public class Poem {
 				return false;
 		} else if (!language.equals(other.language))
 			return false;
-		if (verses == null) {
-			if (other.verses != null)
+		if (text == null) {
+			if (other.text != null)
 				return false;
-		} else if (!verses.equals(other.verses))
+		} else if (!text.equals(other.text))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Poem [id=" + id + ", language=" + language + ", verses=" + verses + "]";
+		return "Poem [id=" + id + ", language=" + language + ", verses=" + text + "]";
 	}
 }
