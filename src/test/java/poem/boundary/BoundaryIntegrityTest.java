@@ -1,6 +1,7 @@
 package poem.boundary;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 import org.junit.runner.RunWith;
 
@@ -23,12 +24,22 @@ public class BoundaryIntegrityTest {
 			.byAnyPackage("..boundary.internal.command_handler..");
 	
 	@ArchTest
+	public static final ArchRule insideDoesntAccessBoundary = noClasses().that()
+			.resideInAPackage("..boundary.internal..").should().accessClassesThat()
+			.resideInAPackage("..boundary");
+	
+	@ArchTest
+	public static final ArchRule insideDoesntAccessDriverAdapters = noClasses().that()
+			.resideInAPackage("..boundary.internal..").should().accessClassesThat()
+			.resideInAPackage("..driver_adapter..");
+	
+	@ArchTest
+	public static final ArchRule insideDoesntAccessDrivenAdapters = noClasses().that()
+			.resideInAPackage("..boundary.internal..").should().accessClassesThat()
+			.resideInAPackage("..driven_adapter..");
+	
+	@ArchTest
 	public static final ArchRule useCaseModelIsOnlyAccessedByBoundaryClass = classes().that()
 			.haveSimpleName("UseCaseModel").should().onlyBeAccessed().byClassesThat().haveSimpleName("Boundary");
 
-	@ArchTest
-	public static final ArchRule commandHandlersOnlyAccessCommandsAndDrivenPortsAndDomainAndStandardJava = classes()
-			.that().resideInAPackage("..boundary.internal.command_handler..").should().onlyAccessClassesThat()
-			.resideInAnyPackage("..command..", "..boundary.driven_port..", "..boundary.internal.domain..", "java.lang..",
-					"java.util..");
 }
