@@ -9,16 +9,11 @@ import poem.boundary.driven_port.IWriteLines;
 
 public class SpringMvcPublisher implements IWriteLines {
 	private static final String LINES_ATTRIBUTE = "lines";
-
 	private Model webModel;
 
-	public void setWebModel(Model webModel) {
-		Objects.requireNonNull(webModel);
-		this.webModel = webModel;
-	}
-
-	public void writeLines(String[] lines) {
+	public void writeLines(String[] lines, Object systemOutput) {
 		Objects.requireNonNull(lines);
+		webModel = (Model)systemOutput; 
 		webModel.addAttribute(LINES_ATTRIBUTE, lines);
 	}
 
