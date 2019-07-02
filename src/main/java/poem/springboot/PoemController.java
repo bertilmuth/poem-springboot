@@ -21,7 +21,7 @@ class PoemController {
 	@GetMapping("/askForPoem")
 	public String askForPoem(@RequestParam(name = "lang", required = false, defaultValue = "en") String language, Model webModel) {
 		// Forward commands to the hexagon, by using SpringMvcDriver
-		springMvcDriver.reactTo(new AskForPoem(language, webModel));
+		springMvcDriver.reactTo(new AskForPoem(language), webModel);
 		return "poemView";
 	}
 }

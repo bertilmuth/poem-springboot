@@ -25,7 +25,7 @@ public class PoemControllerTest {
     	PoemObtainerStub poemObtainerStub = new PoemObtainerStub();
     	webPublisher = new SpringMvcPublisher();
     	Boundary boundary = new Boundary(poemObtainerStub, webPublisher);
-    	SpringMvcDriver webDriver = new SpringMvcDriver(boundary);
+    	SpringMvcDriver webDriver = new SpringMvcDriver(boundary, webPublisher);
     	PoemController poemController = new PoemController(webDriver);
     	this.mockMvc = MockMvcBuilders.standaloneSetup(poemController).build();
     }

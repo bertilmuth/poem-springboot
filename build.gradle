@@ -25,18 +25,11 @@ repositories {
     mavenCentral()
 }
 
-repositories {
-    mavenCentral()
-    maven {
-		url "https://oss.sonatype.org/content/repositories/snapshots/"
-	}
-}
-
-sourceCompatibility = 8
+targetCompatibility = 8
 targetCompatibility = 8
 
 dependencies {
-    compile('org.requirementsascode:poem-hexagon:0.5-SNAPSHOT')
+    compile('org.requirementsascode:poem-hexagon:0.4')
     compile('org.requirementsascode:requirementsascodecore:1.1.1')
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")

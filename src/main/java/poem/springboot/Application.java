@@ -28,7 +28,7 @@ public class Application {
 		PoemRepositoryAdapter poemObtainer = new PoemRepositoryAdapter(poemRepository);
 		SpringMvcPublisher webPublisher = new SpringMvcPublisher();
 		Boundary boundary = new Boundary(poemObtainer, webPublisher);
-		SpringMvcDriver webDriver = new SpringMvcDriver(boundary);
+		SpringMvcDriver webDriver = new SpringMvcDriver(boundary, webPublisher);
 		return webDriver;
 	}
 
