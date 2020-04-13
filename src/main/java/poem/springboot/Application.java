@@ -5,10 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import poem.boundary.Boundary;
+import poem.springboot.boundary.SpringMvcBoundary;
 import poem.springboot.driven_adapter.PoemRepositoryAdapter;
-import poem.springboot.driven_adapter.SpringMvcPublisher;
-import poem.springboot.driver_adapter.SpringMvcDriver;
 
 @SpringBootApplication
 public class Application {
@@ -20,12 +18,10 @@ public class Application {
 	}
 
 	@Bean
-	public SpringMvcDriver driver() {
+	public SpringMvcBoundary springMvcBoundary() {
 		PoemRepositoryAdapter poemObtainer = new PoemRepositoryAdapter(poemRepository);
-		SpringMvcPublisher webPublisher = new SpringMvcPublisher();
-		Boundary boundary = new Boundary(poemObtainer, webPublisher);
-		SpringMvcDriver webDriver = new SpringMvcDriver(boundary, webPublisher);
-		return webDriver;
+		SpringMvcBoundary springMvcBoundary = new SpringMvcBoundary(poemObtainer);
+		return springMvcBoundary; 
 	}
 
 	/**

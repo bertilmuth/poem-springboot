@@ -1,0 +1,22 @@
+spring:
+  main:
+    banner-mode: 'off'
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+  jpa:
+    open-in-view: 'false'
+
+logging:
+  level:
+    root: WARN
+    org:
+      springframework: 
+        web: INFO

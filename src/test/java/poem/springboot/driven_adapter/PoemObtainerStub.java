@@ -1,8 +1,8 @@
-package poem.springboot.adapter.driven;
+package poem.springboot.driven_adapter;
 
 import poem.boundary.driven_port.IObtainPoems;
 
-public class PoemObtainerStub implements IObtainPoems {
+class PoemObtainerStub implements IObtainPoems {
 	public static final String ENGLISH_POEM = "Random english poem.";
 	public static final String GERMAN_POEM = "Random german poem.";
 
