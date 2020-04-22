@@ -18,7 +18,7 @@ apply plugin: 'io.spring.dependency-management'
 
 bootJar {
     baseName = 'poem-springboot'
-    version =  '0.6'
+    version =  '0.7.1'
 }
 
 repositories {
@@ -29,13 +29,13 @@ sourceCompatibility = 8
 targetCompatibility = 8
 
 dependencies {
-    compile('org.requirementsascode:poem-hexagon:0.6')
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile("com.h2database:h2")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("org.springframework.boot:spring-boot-devtools")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
-    testCompile 'com.tngtech.archunit:archunit-junit4:0.10.2'
+    implementation 'org.requirementsascode:poem-hexagon:0.7.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'com.tngtech.archunit:archunit-junit4:0.10.2'
 }
 
