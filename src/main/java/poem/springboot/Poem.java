@@ -1,4 +1,4 @@
-package poem.application;
+package poem.springboot;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package poem.driver_adapter;
+package poem.springboot.driver_adapter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import poem.boundary.SpringMvcBoundary;
 import poem.command.AskForPoem;
+import poem.springboot.boundary.SpringMvcBoundary;
 
 @Controller
 public class PoemController {

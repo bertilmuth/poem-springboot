@@ -1,4 +1,4 @@
-package poem.application;
+package poem.springboot;
 
 import java.util.Collection;
 
