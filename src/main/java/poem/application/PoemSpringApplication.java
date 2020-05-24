@@ -1,20 +1,20 @@
-package poem.springboot;
+package poem.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import poem.springboot.boundary.SpringMvcBoundary;
-import poem.springboot.driven_adapter.PoemRepositoryAdapter;
+import poem.boundary.SpringMvcBoundary;
+import poem.driven_adapter.PoemRepositoryAdapter;
 
 @SpringBootApplication
-public class Application {
+public class PoemSpringApplication {
 	@Autowired
 	private PoemRepository poemRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(PoemSpringApplication.class, args);
 	}
 
 	@Bean

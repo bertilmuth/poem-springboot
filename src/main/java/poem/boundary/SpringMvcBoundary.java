@@ -1,11 +1,11 @@
-package poem.springboot.boundary;
+package poem.boundary;
 
 import org.springframework.ui.Model;
 
 import poem.boundary.Boundary;
 import poem.boundary.driven_port.IObtainPoems;
 import poem.boundary.driver_port.IReactToCommands;
-import poem.springboot.driven_adapter.SpringMvcPublisher;
+import poem.driven_adapter.SpringMvcPublisher;
 
 public class SpringMvcBoundary {
 	private final IObtainPoems poemObtainer;

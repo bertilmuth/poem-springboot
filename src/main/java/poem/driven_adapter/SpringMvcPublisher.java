@@ -1,4 +1,4 @@
-package poem.springboot.driven_adapter;
+package poem.driven_adapter;
 
 import java.util.Objects;
 

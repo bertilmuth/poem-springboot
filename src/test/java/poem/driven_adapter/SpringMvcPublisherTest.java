@@ -1,4 +1,4 @@
-package poem.springboot.driven_adapter;
+package poem.driven_adapter;
 
 import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -10,8 +10,9 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.ModelAndView;
 
-import poem.springboot.boundary.SpringMvcBoundary;
-import poem.springboot.driver_adapter.PoemController;
+import poem.boundary.SpringMvcBoundary;
+import poem.driven_adapter.SpringMvcPublisher;
+import poem.driver_adapter.PoemController;
 
 public class SpringMvcPublisherTest {
 	private MockMvc mockMvc;

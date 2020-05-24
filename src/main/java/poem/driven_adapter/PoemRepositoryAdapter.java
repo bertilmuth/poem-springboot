@@ -1,11 +1,11 @@
-package poem.springboot.driven_adapter;
+package poem.driven_adapter;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+import poem.application.Poem;
+import poem.application.PoemRepository;
 import poem.boundary.driven_port.IObtainPoems;
-import poem.springboot.Poem;
-import poem.springboot.PoemRepository;
 
 public class PoemRepositoryAdapter implements IObtainPoems {
 	private PoemRepository poemRepository;
