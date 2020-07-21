@@ -29,7 +29,7 @@ sourceCompatibility = 8
 targetCompatibility = 8
 
 dependencies {
-    implementation 'org.requirementsascode:poem-hexagon:0.7.4'
+    implementation 'org.requirementsascode:poem-hexagon:0.9'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'com.h2database:h2'
