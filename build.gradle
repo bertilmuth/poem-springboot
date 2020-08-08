@@ -18,7 +18,7 @@ apply plugin: 'io.spring.dependency-management'
 
 bootJar {
     baseName = 'poem-springboot'
-    version =  '1.0'
+    version =  '1.2'
 }
 
 repositories {
@@ -29,7 +29,7 @@ sourceCompatibility = 8
 targetCompatibility = 8
 
 dependencies {
-    implementation 'org.requirementsascode:poem-hexagon:1.1'
+    implementation 'org.requirementsascode:poem-hexagon:1.2'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'com.h2database:h2'
