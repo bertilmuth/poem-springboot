@@ -18,7 +18,7 @@ apply plugin: 'io.spring.dependency-management'
 
 bootJar {
     baseName = 'poem-springboot'
-    version =  '1.6'
+    version =  '1.7'
 }
 
 repositories {
